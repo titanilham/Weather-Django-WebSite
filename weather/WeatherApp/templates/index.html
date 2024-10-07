@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ city_name }} Weather</title>
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    <link rel="shortcut icon" href="{% static 'image/weather.png' %}">
+</head>
+<body>
+    
+    <div class="full">
+         
+        <h3 class="temp" data-tippy-content="Temperature">{{ weather }}°C</h3>
+    
+        <h4 class="city_name" data-tippy-content="The name of the city">{{ city_name }}</h4>
+
+    <form method="post" action="">
+        {% csrf_token %}
+        <input class="input_city" name="city" placeholder="Enter the city name" required/>
+    </form>
+    
+    
+    </div>
+
+    <h3 class="error" data-tippy-content="Error">{{ error }}</h3>
+
+    <script src="https://unpkg.com/@popperjs/core@2"></script>
+    <script src="https://unpkg.com/tippy.js@6"></script>
+
+    <script type="text/javascript" src={% static "js/main.js" %}></script>
+</body>
+</html>
+{% comment %}
+Цветовая схема: черный - #1A1A1D 
+                серый - #4E4E50
+                темный красный - #6F2232
+                Темный розовы - #950740
+                Красный - #C3073F
+{% endcomment %}

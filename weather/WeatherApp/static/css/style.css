@@ -1,0 +1,77 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap');
+
+
+body{
+
+    background-color: #ffffff ;
+    color: #000000;
+    font-family: 'Ubuntu';
+
+}
+
+.full{
+
+    
+    position: absolute;
+    top: 20%;
+    left: 50%;
+    transform: translate(-50%, -20%);
+      
+
+}
+
+
+.temp{
+    font-size: 500%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+
+}
+
+.city_name{
+    font-size: 200%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #000000c0;
+
+}
+
+.input_city{
+
+    font-size: 300%;    
+    background: transparent;
+    border: none;
+    border-bottom: 2px solid #C3073F;
+    color: #000000;
+    text-align: center;
+    font-family: 'Ubuntu';
+}
+
+
+
+.error{
+    padding-top: 1%;
+    max-width: 400px;
+    color: rgb(196, 0, 0);
+    font-size: 150%;
+    position: absolute;
+    left: 1%;
+    bottom: 5%;
+
+}
+
+@media screen and (max-width : 460px) {
+    
+    
+    .input_city{
+    
+        font-size: 200%;
+    
+    }
+    
+
+}
