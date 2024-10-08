@@ -2,7 +2,7 @@
 import requests
 from django.shortcuts import render
 from .config import API_KEY
-
+from django.http import HttpResponse
 
 def index(request):
     """Главная страница"""
@@ -31,3 +31,9 @@ def index(request):
         else:
             error = "No city specified."
     return render(request, "index.html", {"weather": weather, "error": error, "city_name": city_name})
+
+def settings(request):
+    return render(request, "settings.html") 
+
+def login(request):
+    return render(request, "login.html")
