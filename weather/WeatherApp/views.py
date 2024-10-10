@@ -9,7 +9,7 @@ def index(request):
     error = ""
     city_name = ""
 
-    # Получаем город из GET-параметров, если метод GET
+    
     city = request.GET.get("city") if request.method == "GET" else request.POST.get("city")
 
     if city:
